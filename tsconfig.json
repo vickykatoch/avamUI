@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"removeComments": true,
+		"noResolve": true,
+		"noLib": false
+	},
+	"files": [
+		"app/app.module.ts"		
+	]
+}

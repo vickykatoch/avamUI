@@ -1,0 +1,29 @@
+{
+  "name": "avam-ui",
+  "version": "1.0.0",
+  "description": "An angulat based ui framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vickykatoch/avamUI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vickykatoch/avamUI/issues"
+  },
+  "homepage": "https://github.com/vickykatoch/avamUI#readme",
+  "devDependencies": {
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-typescript": "^2.9.2",
+    "gulp-uglify": "^1.5.1",
+    "http-server": "^0.8.5"
+  }  
+}
