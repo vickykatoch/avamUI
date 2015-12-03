@@ -4,6 +4,7 @@
 		"**/.git": true,
 		"**/.DS_Store": true,
 		"app/**/*.js" : true,
-		"app/**/*.map" :true
+		"app/**/*.map" :true,
+		"node_modules" : true
 	}
 }

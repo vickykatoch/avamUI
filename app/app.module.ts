@@ -1,4 +1,4 @@
 module avam{
 	'use strict';
-	angular.module("avam", ["avamUI"]);
+	angular.module("avam", ["avamUi"]);
 }

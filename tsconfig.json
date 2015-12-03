@@ -5,7 +5,7 @@
 		"sourceMap": true,
 		"removeComments": true,
 		"noResolve": true,
-		"noLib": false
+		"noLib": true
 	},
 	"files": [
 		"app/app.module.ts"		
