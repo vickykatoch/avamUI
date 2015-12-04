@@ -3,18 +3,17 @@ var avam;
 (function (avam) {
     var ui;
     (function (ui) {
-        var AvamUiDirective = (function () {
-            function AvamUiDirective() {
-                this.replace = true;
-                this.transclude = false;
+        var AvamUIDirective = (function () {
+            function AvamUIDirective() {
+                this.transclude = true;
                 this.scope = {};
-                this.template = "<h1>Hi There</h1>";
+                this.templateUrl = './src/avamUI.template.html';
             }
-            AvamUiDirective.instance = function () {
-                return new AvamUiDirective;
+            AvamUIDirective.instance = function () {
+                return new AvamUIDirective;
             };
-            return AvamUiDirective;
+            return AvamUIDirective;
         })();
-        angular.module("avamUi").directive("avamUi", AvamUiDirective.instance);
+        angular.module("avamUI").directive("avamUi", AvamUIDirective.instance);
     })(ui = avam.ui || (avam.ui = {}));
 })(avam || (avam = {}));

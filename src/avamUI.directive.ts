@@ -1,15 +1,19 @@
 /// <reference path="../typings/angularjs/angular.d.ts" />
 
 module avam.ui{
-	class AvamUiDirective implements ng.IDirective{
+	
+	
+	
+	
+	class AvamUIDirective implements ng.IDirective{
+		
 		static instance() : ng.IDirective{
-			return new AvamUiDirective;
+			return new AvamUIDirective;
 		}
-		replace = true;
-		transclude=false;
+		transclude=true;
 		scope = {
 		};
-		template="<h1>Hi There</h1>";
+		templateUrl = './src/avamUI.template.html';
 	}	
-	angular.module("avamUi").directive("avamUi", AvamUiDirective.instance);
+	angular.module("avamUI").directive("avamUi", AvamUIDirective.instance);
 }
