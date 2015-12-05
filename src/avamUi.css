@@ -1,0 +1,33 @@
+.avam-header{
+	background-color: white;
+    padding: 0 10px;
+    border-bottom: 2px solid red;
+    vertical-align: middle;
+}
+.avam-logo-area{
+    
+}
+.avam-icon{
+	display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    vertical-align: top;
+    border: 1px solid #999;
+}
+.avam-title-area{
+    display: inline-block;
+}
+.avam-logo-title{
+    color: #111;
+    margin-top: 6px;
+    font-size: 22px;
+}
+.avam-logo-subtitle{
+    font-size: 13px;
+    margin-top: -13px;
+}
+.avam-collapsed-menu {
+    display: inline-block;
+    height: 100%;
+}

@@ -24,3 +24,7 @@ gulp.task('compile:ts', function(){
            }))
         .pipe(gulp.dest(gulpConfig.outputPath));
 });
+
+gulp.task('watch', function(){
+    gulp.watch(gulpConfig.typeScriptSourceFiles, ['clean','compile:ts']);
+});

@@ -1,6 +1,20 @@
-<div class="avam-ui">	
+<div class="avam-header">	
 	<div class="row">
-		<div class="col-sm-6">Left</div>
-		<div class="col-sm-6">Right</div>
+		<div class="col-sm-6 avam-logo-area">
+			<img ng-src="{{iconFile}}" class="avam-icon"/>
+			<div class="avam-title-area">
+				<p class="avam-logo-title">{{title}}</p>
+				<p class="avam-logo-subtitle">{{subTitle}}</p>						
+			</div>
+			<div ng-if="vm.isMenuVisible" class="avam-collapsed-menu pull-right">
+				<button type="button" class="btn ps-nav-button">
+                    <i class="fa fa-bars"></i>
+                </button>
+			</div>		
+		</div>
+		<div class="col-sm-6">
+			
+			
+		</div>
 	</div>
 </div>
