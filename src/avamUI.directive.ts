@@ -9,7 +9,11 @@ module avam.ui{
 		subTitle:string;
 		iconFile:string;
 	}
-		
+	
+	export interface IIAvamUIScope extends ng.IScope {
+        vm: IAvamUIControllerModel;
+    }
+	
 	class AvamUIDirective implements ng.IDirective{
 		
 		static instance() : ng.IDirective{
@@ -24,7 +28,7 @@ module avam.ui{
 		controllerAs = 'vm';
 		templateUrl = './src/avamUI.template.html';
 		controller = AvamUIModelController;
-		link(scope: ng.IScope, element: ng.IAugmentedJQuery,
+		link(scope: IIAvamUIScope, element: ng.IAugmentedJQuery,
             attributes: IAvamUIAttributes, controller: IAvamUIControllerModel): void {
 				
 			}

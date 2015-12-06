@@ -28,6 +28,14 @@
     margin-top: -13px;
 }
 .avam-collapsed-menu {
+    line-height: 60px;
     display: inline-block;
     height: 100%;
+}
+.avam-right-side-controls{
+    line-height: 60px;
+}
+
+.avam-right-side-controls > div {
+    text-align: center;
 }
