@@ -45,13 +45,5 @@ module avam.ui{
 			}
 			
 		}
-		
-		
-		private broadcastMenuState():void{
-			this.rootScope.$broadcast('avam-menu-visible',{
-				show : this.isMenuVisible
-			});
-		}
-		
 	}
 }

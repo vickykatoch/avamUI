@@ -19,8 +19,6 @@ var avam;
             AvamUIDirective.instance = function () {
                 return new AvamUIDirective;
             };
-            AvamUIDirective.prototype.link = function (scope, element, attributes, controller) {
-            };
             return AvamUIDirective;
         })();
         angular.module("avamUI").directive("avamUi", AvamUIDirective.instance);

@@ -37,11 +37,6 @@ var avam;
                     });
                 };
             }
-            AvamUIModelController.prototype.broadcastMenuState = function () {
-                this.rootScope.$broadcast('avam-menu-visible', {
-                    show: this.isMenuVisible
-                });
-            };
             AvamUIModelController.$inject = ['$scope', '$rootScope', '$window', '$timeout'];
             return AvamUIModelController;
         })();
