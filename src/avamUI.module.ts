@@ -2,5 +2,5 @@
 
 module avam.ui{
 	'use strict';
-	angular.module("avamUI", ["avamMenu"]);
+	angular.module("avamUI", ["avam-menu"]);
 }
