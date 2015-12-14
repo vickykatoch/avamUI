@@ -28,10 +28,12 @@
   ],
   "dependencies": {
     "angular": "~1.4.8",
+    "angular-ui-router": "ui-router#~0.2.15",
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.6",
-    "font-awesome": "~4.5.0",
-    "avam-menu": "https://github.com/vickykatoch/avam-menu.git",
-    "dist": "https://github.com/vickykatoch/avam-menu/tree/master/dist"
+    "font-awesome": "~4.5.0"
+  },
+  "devDependencies": {
+    "angular-animate": "~1.4.8"
   }
 }

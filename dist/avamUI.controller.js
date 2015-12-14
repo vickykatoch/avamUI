@@ -14,12 +14,6 @@ var avam;
                 this.isMenuVisible = true;
                 this.isMenuButtonVisible = false;
                 this.route = "";
-                // $(window).on('resize.avam', function(){
-                // 	this.scope.$apply(function(){
-                // 		this.checkWidth();
-                // 		this.broadcastMenuState();
-                // 	})
-                // });
                 $(window).on('resize.avam', function (evt, args) {
                     _this.scope.$apply(function () {
                         _this.checkWidth();
@@ -33,20 +27,6 @@ var avam;
                     _this.checkWidth();
                     _this.broadcastMenuState();
                 }, 0);
-                // ngTimeout(function(){
-                // 	this.checkWidth();
-                // 	this.broadcastMenuState();
-                // },0);
-                // var checkWidth= function(){
-                // 	var width = Math.max($(ngWin).width(), ngWin.innerWidth);
-                // 	scope.vm.isMenuVisible = (width >= 768);
-                //     scope.vm.isMenuButtonVisible = !scope.vm.isMenuVisible;
-                // }
-                // var broadcastMenuState = function(){
-                // 	rootScope.$broadcast('AVAM-MENU-VISIBILITY-CHANGED', {
-                // 		show: scope.vm.isMenuVisible,
-                // 	});
-                // }
             }
             AvamUIModelController.prototype.checkWidth = function () {
                 var width = Math.max($(this.ngWin).width(), this.ngWin.innerWidth);
@@ -55,7 +35,9 @@ var avam;
             };
             AvamUIModelController.prototype.broadcastMenuState = function () {
                 this.rootScope.$broadcast('AVAM-MENU-VISIBILITY-CHANGED', {
-                    show: this.isMenuVisible
+                    show: this.isMenuVisible,
+                    isVertical: this.isMenuButtonVisible,
+                    allowToggle: !this.isMenuButtonVisible
                 });
             };
             AvamUIModelController.prototype.onRouteChanged = function () {
@@ -72,7 +54,6 @@ var avam;
             AvamUIModelController.prototype.toggleMenu = function () {
                 this.isMenuVisible = !this.isMenuVisible;
                 this.broadcastMenuState();
-                this.scope.$apply();
             };
             AvamUIModelController.$inject = ['$scope', '$rootScope', '$window', '$timeout'];
             return AvamUIModelController;

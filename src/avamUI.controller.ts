@@ -26,13 +26,6 @@ module avam.ui{
 		static $inject =['$scope', '$rootScope', '$window','$timeout'];
 		constructor(private scope : IIAvamUIScope, private rootScope: ng.IRootScopeService, 
 					private ngWin : ng.IWindowService, private ngTimeout : ng.ITimeoutService){
-					
-			// $(window).on('resize.avam', function(){
-			// 	this.scope.$apply(function(){
-			// 		this.checkWidth();
-			// 		this.broadcastMenuState();
-			// 	})
-			// });
 			$(window).on('resize.avam',(evt: JQueryEventObject, args:any[]):any=>
 			{
 				this.scope.$apply(()=>{
@@ -50,23 +43,6 @@ module avam.ui{
 				this.checkWidth();
 				this.broadcastMenuState();
 			},0);
-			
-			// ngTimeout(function(){
-			// 	this.checkWidth();
-			// 	this.broadcastMenuState();
-			// },0);
-			
-			// var checkWidth= function(){
-			// 	var width = Math.max($(ngWin).width(), ngWin.innerWidth);
-			// 	scope.vm.isMenuVisible = (width >= 768);
-            //     scope.vm.isMenuButtonVisible = !scope.vm.isMenuVisible;
-			// }
-			// var broadcastMenuState = function(){
-			// 	rootScope.$broadcast('AVAM-MENU-VISIBILITY-CHANGED', {
-			// 		show: scope.vm.isMenuVisible,
-			// 	});
-			// }
-			
 		}
 		checkWidth():void{
 			var width = Math.max($(this.ngWin).width(), this.ngWin.innerWidth);
@@ -75,7 +51,9 @@ module avam.ui{
 		}
 		broadcastMenuState():void {
 			this.rootScope.$broadcast('AVAM-MENU-VISIBILITY-CHANGED', {
-				show: this.isMenuVisible
+				show: this.isMenuVisible,
+				isVertical : this.isMenuButtonVisible,
+				allowToggle : !this.isMenuButtonVisible
 			});
 		}
 		
@@ -93,9 +71,6 @@ module avam.ui{
 		toggleMenu():void{
 			this.isMenuVisible= !this.isMenuVisible;
 			this.broadcastMenuState();
-			this.scope.$apply();
-			
-			
 		}
 	}
 }
