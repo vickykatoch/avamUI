@@ -25,11 +25,8 @@ module avam.ui{
 		controllerAs = 'vm';
 		templateUrl = './src/avamUI.template.html';
 		controller = AvamUIModelController;
-		
-		
 		// link(scope: IIAvamUIScope, element: ng.IAugmentedJQuery,
         //     attributes: IAvamUIAttributes, controller: IAvamUIControllerModel): void {
-				
 		// 	}
 	}	
 	angular.module("avamUI").directive("avamUi", AvamUIDirective.instance);
