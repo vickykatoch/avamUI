@@ -28,3 +28,11 @@ gulp.task('compile:ts', function(){
 gulp.task('watch', function(){
     gulp.watch(gulpConfig.typeScriptSourceFiles, ['clean','compile:ts']);
 });
+
+gulp.task('app', function(){
+    return gulp.src(gulpConfig.appFiles)
+                .pipe(ts({
+                        noImplicitAny: true
+                       }))
+        .pipe(gulp.dest(gulpConfig.appPath));
+});

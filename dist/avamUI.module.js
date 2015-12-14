@@ -4,6 +4,6 @@ var avam;
     var ui;
     (function (ui) {
         'use strict';
-        angular.module("avamUI", ["avam-menu"]);
+        angular.module("avamUI", ["avam-menu", "ui.router"]);
     })(ui = avam.ui || (avam.ui = {}));
 })(avam || (avam = {}));

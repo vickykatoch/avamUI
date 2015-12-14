@@ -8,6 +8,8 @@ var GulpConfig = (function () {
         this.templatePath = "./src/*.html";
         this.jsFilePath = "./dist/*.js";
         this.moduleName = 'avamUI';
+        this.appFiles = './app/*.ts';
+        this.appPath = './app/';
     }
     return gulpConfig;
 })();

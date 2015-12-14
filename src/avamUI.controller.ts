@@ -23,9 +23,10 @@ module avam.ui{
 		isMenuButtonVisible:boolean=false;
 		route:string="";
 		
-		static $inject =['$scope', '$rootScope', '$window','$timeout'];
+		static $inject =['$scope', '$rootScope', '$window','$timeout',' $state'];
 		constructor(private scope : IIAvamUIScope, private rootScope: ng.IRootScopeService, 
-					private ngWin : ng.IWindowService, private ngTimeout : ng.ITimeoutService){
+					private ngWin : ng.IWindowService, private ngTimeout : ng.ITimeoutService,
+					private stateService: ng.ui.IStateService){
 			$(window).on('resize.avam',(evt: JQueryEventObject, args:any[]):any=>
 			{
 				this.scope.$apply(()=>{
@@ -43,6 +44,7 @@ module avam.ui{
 				this.checkWidth();
 				this.broadcastMenuState();
 			},0);
+			this.onRouteChanged();
 		}
 		checkWidth():void{
 			var width = Math.max($(this.ngWin).width(), this.ngWin.innerWidth);
@@ -61,6 +63,7 @@ module avam.ui{
 		onRouteChanged():void{
 			this.scope.$on('AVAM-MENU-ITEM-CHANGED',  (evt: ng.IAngularEvent,  data:any):void=>{
 				this.route=data.route;
+			    this.stateService.state(this.route);
 			});
 		}
 		onOrientationChange(): void{
