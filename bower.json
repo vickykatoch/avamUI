@@ -31,6 +31,7 @@
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.6",
     "font-awesome": "~4.5.0",
-    "avam-menu": "*"
+    "avam-menu": "https://github.com/vickykatoch/avam-menu.git",
+    "dist": "https://github.com/vickykatoch/avam-menu/tree/master/dist"
   }
 }

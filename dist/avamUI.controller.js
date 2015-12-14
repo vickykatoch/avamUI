@@ -16,7 +16,7 @@ var avam;
                 $(window).on('resize.avam', function () {
                     scope.$apply(function () {
                         checkWidth();
-                        this.broadcastMenuState();
+                        broadcastMenuState();
                     });
                 });
                 scope.$on('destroy', function () {
@@ -32,8 +32,10 @@ var avam;
                     scope.vm.isMenuButtonVisible = !scope.vm.isMenuVisible;
                 };
                 var broadcastMenuState = function () {
-                    rootScope.$broadcast('avam-menu-visible', {
-                        show: scope.vm.isMenuVisible
+                    rootScope.$broadcast('AVAM-MENU-VISIBILITY-CHANGED', {
+                        show: this.isMenuVisible,
+                        isMenuVertical: this.isMenuVertical,
+                        allowMenuToggle: !this.isMenuButtonVisible
                     });
                 };
             }
