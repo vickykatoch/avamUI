@@ -7,7 +7,7 @@
 				<p class="avam-logo-subtitle">{{subTitle}}</p>						
 			</div>
 			<div ng-if="vm.isMenuButtonVisible" class="avam-collapsed-menu pull-right">
-				<button type="button" class="btn ps-nav-button">
+				<button type="button" class="btn ps-nav-button" ng-click="vm.toggleMenu()">
                     <i class="fa fa-bars"></i>
                 </button>
 			</div>		
@@ -21,4 +21,4 @@
 		</div>
 	</div>
 </div>
-<div ng-transclude></div>
+<div ng-transclude ng-show="vm.isMenuVisible"></div>
